@@ -16,10 +16,10 @@ class AboutTextWithSign extends StatelessWidget {
           "About \nmy story",
           style: Theme.of(context)
           .textTheme
-          .headline3
+          .displaySmall
           ?.copyWith(fontWeight: FontWeight.bold, color: Colors.black),
           ),
-          SizedBox(height: kDefaultPadding * 2),
+          const SizedBox(height: kDefaultPadding * 2),
           Image.asset("assets/images/sign.png")
       ],
     );
