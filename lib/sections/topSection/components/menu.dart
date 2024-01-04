@@ -18,8 +18,8 @@ class _MenuState extends State<Menu> {
     "Home",
     "About",
     "Services",
-    "Portfolio",
-    "Testinonial",
+    "Recent Work",
+    "Feedback",
     "Contact"
   ];
   @override
@@ -87,3 +87,6 @@ class _MenuState extends State<Menu> {
       ),
   );
 }
+
+//ye wali file change kro
+//jese meri portfolioscreen h wesi banao takey tum us mein gesturedetector laga sko
