@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/static/keys.dart';
 import 'package:flutter_application_1/constants.dart';
 import 'package:flutter_application_1/models/Service.dart';
 
@@ -11,9 +12,11 @@ class ServiceSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: KeyHolders.desktop_serviceKey,
       margin: const EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
       constraints: const BoxConstraints(maxWidth: 1110),
       child: Column(
+        
         children: [
           const SectionTitle(
             title: "Service Offerings",

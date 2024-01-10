@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/static/keys.dart';
 
 import '../../../constants.dart';
 
@@ -18,9 +19,18 @@ class _MenuState extends State<Menu> {
     "Home",
     "About",
     "Services",
-    "Portfolio",
-    "Testinonial",
+    "Recent Work",
+    "Feedback",
     "Contact"
+  ];
+   List<GlobalKey> menuKeys = [
+    KeyHolders.desktop_aboutKey,
+    KeyHolders.desktop_aboutKey,
+    KeyHolders.desktop_serviceKey,
+    KeyHolders.desktop_recentworkKey,
+    KeyHolders.desktop_feedbackKey,
+    KeyHolders.desktop_contactKey
+    // Add keys for other menu items as needed
   ];
   @override
   Widget build(BuildContext context) {
@@ -51,6 +61,10 @@ class _MenuState extends State<Menu> {
       setState(() {
         selectedIndex = index;
       });
+      Scrollable.ensureVisible(
+          menuKeys[index].currentContext!,
+          duration: const Duration(milliseconds: 1200),
+        );
     },
     onHover: (value) {
       setState(() {
@@ -87,3 +101,6 @@ class _MenuState extends State<Menu> {
       ),
   );
 }
+
+//ye wali file change kro
+//jese meri portfolioscreen h wesi banao takey tum us mein gesturedetector laga sko

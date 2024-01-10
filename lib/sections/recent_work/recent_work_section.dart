@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/components/section_title.dart';
+import 'package:flutter_application_1/components/static/keys.dart';
 import 'package:flutter_application_1/constants.dart';
 
 import '../../components/hireme_card.dart';
@@ -12,6 +13,7 @@ class RecentWorkSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+       key: KeyHolders.desktop_recentworkKey,
       margin: const EdgeInsets.only(top: kDefaultPadding * 6),
       width: double.infinity,
       //just for demo
@@ -24,6 +26,7 @@ class RecentWorkSection extends StatelessWidget {
           ),
       ),
       child:  Column(
+       
         children: [
           Transform.translate(
             offset: const Offset(0, -80),
